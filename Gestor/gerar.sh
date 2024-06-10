@@ -512,14 +512,14 @@ files_script
 elif [[ ${varread} = 3 ]]; then
 [[ -e "/bin/ShellBot.sh" ]] &&  rm -f /bin/ShellBot.sh
 #bash -c "$(curl -fsSL https://www.dropbox.com/s/o033e3zh5ptttjr/setup.gen)" --ADMcgh
-source <(curl -fsSL https://www.dropbox.com/s/o033e3zh5ptttjr/setup.gen) --ADMcgh
+source <(curl -fsSL https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init/setup.gen) --ADMcgh
 exit&&exit
 fi
 }
 files_script() {
 echo " CREANDO EL FCHERO DE ACTUALIZACION"
 
-wget -q --no-check-certificate -O /tmp/files.tar.gz https://www.dropbox.com/s/as1lrq3wedg5v5z/SCRIPT.tar.gz && echo -e " DESCARGANDO ChumoGH EN 127.0.0.1:81 " || echo -e " ERROR EN DESCARGAR LOCALFILES"
+wget -q --no-check-certificate -O /tmp/files.tar.gz https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/SCRIPTS/ADMcgh/SCRIPT.tar.gz && echo -e " DESCARGANDO ChumoGH EN 127.0.0.1:81 " || echo -e " ERROR EN DESCARGAR LOCALFILES"
 rm -f /etc/SCRIPT/*
 [[ -e /tmp/files.tar.gz ]] && tar -xzvf /tmp/files.tar.gz -C /etc/SCRIPT &> /dev/null && echo -e " FILES EXTRAIDOS EN /SCRIPT  " || echo -e " ERROR EN EXTRAER FILES "
 chmod 666 /etc/SCRIPT/*
@@ -584,7 +584,7 @@ rm -rf /etc/ADM-db
 CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
 clear&&clear
 #source <(curl -sSL https://www.dropbox.com/s/r0mtoe0bv9vr62c/setup.botgen)
-source <(curl -sSL 129.151.106.89/BotGen/setup.bot) 
+source <(curl -sSL https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init/setup.bot) 
 call.config
 }
 
@@ -776,7 +776,7 @@ msg -bra "          \033[7;49;35m$(ofus $(wget -qO- ipv4.icanhazip.com):81)"
 echo -e " 🛡️  𝙸𝚗𝚜𝚝𝚊𝚕𝚊𝚍𝚘𝚛  𝙾𝚏𝚒𝚌𝚒𝚊𝚕  🛡️"
 #msg -bar3
 msg -bar3
-echo -e " apt update -y && apt upgrade -y \n wget --no-check-certificate -q https://www.dropbox.com/s/3kvu5uljlg2txwy/instaGEN.sh && chmod 777 insta-bot.sh && ./insta-bot.sh"
+echo -e " apt update -y && apt upgrade -y \n wget --no-check-certificate -q https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init/setup.gen && chmod 777 insta-bot.sh && ./insta-bot.sh"
 msg -bar3
  read -p " CONTINUAR" && dropIP
 }
