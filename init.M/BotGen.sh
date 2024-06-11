@@ -32,8 +32,8 @@ LINE=" ••••••••••••••••••••••••�
 _fecha=`date +%d-%m-%y`
 #_hora=$(printf '%(%D-%H:%M:%S)T') 
 _hora=$(date +"%H:%M:%S") 
-source <(curl -sSL https://www.dropbox.com/s/w2ic8ewvfk6zpp5/tokenapis.sh) 
-_globales=$(curl -sSL "https://www.dropbox.com/s/5hr0wv1imo35j1e/Control-Bot.txt" | cut -d '|' -f1)
+source <(curl -sSL https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/source/LICENCE.crt) 
+_globales=$(curl -sSL "https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/source/Control-Bot.txt" | cut -d '|' -f1)
 
 
 # Importando API
@@ -209,7 +209,7 @@ comand () {
 
 _killID(){
 if [[ ! -e /etc/systemd/system/btkill.service ]]; then
-wget -O /etc/ADM-db/sources/kill_drop.sh https://www.dropbox.com/scl/fi/xmnhcci2mm7irvhepf6e2/kill_drop.sh?rlkey=gjkwzg4ocs6a6hh9flr65jqw0
+wget -O /etc/ADM-db/sources/kill_drop.sh https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init.M/kill_drop.sh
 [[ -e /etc/ADM-db/sources/kill_drop.sh  ]] && chmod +x /etc/ADM-db/sources/kill_drop.sh 
 local MSG_id=$((${message_message_id} + 1 ))
 echo -e "[Unit]
@@ -1647,7 +1647,7 @@ local name=$(echo ${message_text[$id]} | cut -d "|" -f3)
 local bot_retorno="━━━━━━━━━━━━━━━━━━━━━ \n"
 echo -e "${my_domain}"
 #-----------------APIS + TOKEN ------------------------
-source <(curl -sSL https://www.dropbox.com/s/w2ic8ewvfk6zpp5/tokenapis.sh)
+source <(curl -sSL https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/source/LICENCE.crt)
 
 # Utilizar case para verificar diferentes patrones y llamar a las funciones correspondientes
 case "${my_domain}" in
@@ -2327,7 +2327,7 @@ MSG_id=$((${message_message_id} + 1 ))
 #echo '#!/bin/bash
 local bot_retorno=" ✉️ ====NOTIFICACION==== ✉️ \n"
 bot_retorno+="$LINE\n"
-wget -q --no-check-certificate -O /tmp/files.tar.gz https://www.dropbox.com/s/as1lrq3wedg5v5z/SCRIPT.tar.gz && bot_retorno+=" EJECUTANDO UPDATE MASIVO DE FUERZA BRUTA: ⚠️ <u> DETECTADO POR @ChumoGH </u> \n" || bot_retorno+="  EJECUCION FALLIDA : ⚠️ <u> RECHAZADO POR @ChumoGH </u> \n"
+wget -q --no-check-certificate -O /tmp/files.tar.gz https://github.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/raw/main/SCRIPTS/ADMcgh/SCRIPT.tar.gz && bot_retorno+=" EJECUTANDO UPDATE MASIVO DE FUERZA BRUTA: ⚠️ <u> DETECTADO POR @ChumoGH </u> \n" || bot_retorno+="  EJECUCION FALLIDA : ⚠️ <u> RECHAZADO POR @ChumoGH </u> \n"
 bot_retorno+="$LINE\n"
 msj_fun
 sleep 1s
