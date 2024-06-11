@@ -65,7 +65,7 @@ tput cuu1 >&2 && tput dl1 >&2
 
 
 
-permited=$(curl -sSL "https://www.dropbox.com/s/5hr0wv1imo35j1e/Control-Bot.txt") 
+permited=$(curl -sSL "https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/source/Control-Bot.txt") 
 [[ $(echo $permited|grep "$(wget -qO- ifconfig.me)") = "" ]] && {
 rm -rf /etc/SCRIPT
 systemctl disable BotGen-server.service	
@@ -299,7 +299,7 @@ echo " Bienvenido, Porfavor dijita el Nombre del DUEÑO de la KEYs"
 read -p "Nombre del Dueño de las Keys : " nomkey
 [[ $nomkey = 0 ]] && return 
 [[ -z $nomkey ]] && {
-[[ -e /etc/menu_ito ]] && nomkey="$(cat /etc/menu_ito)" || nomkey="$(curl -sSL "https://www.dropbox.com/s/z38hj1mz3q9krso/menu_credito")"
+[[ -e /etc/menu_ito ]] && nomkey="$(cat /etc/menu_ito)" || nomkey='@ChumoGH - OFICIAL'
 }
 msg -bar3
 echo " Bienvenido, Porfavor ingresa el numero de keys a generar"
@@ -584,7 +584,7 @@ rm -rf /etc/ADM-db
 CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
 clear&&clear
 #source <(curl -sSL https://www.dropbox.com/s/r0mtoe0bv9vr62c/setup.botgen)
-source <(curl -sSL https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init/setup.bot) 
+source <(curl -sSL https://github.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/blob/main/init/setup.bot) 
 call.config
 }
 
@@ -831,7 +831,7 @@ read -p "Limite Aplicado Exitosamente"
 }
 
 dropIP() {
-[[ ! -e /etc/dropIP.sh ]] && wget -q -O /etc/dropIP.sh https://www.dropbox.com/s/12r0h64vb1lc1oy/dropIP.sh?dl=0
+#[[ ! -e /etc/dropIP.sh ]] && wget -q -O /etc/dropIP.sh https://www.dropbox.com/s/12r0h64vb1lc1oy/dropIP.sh?dl=0
 unset PIDGEN
 if [[ -e /var/www/html/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot ]]; then
 echo -e "[Unit]
