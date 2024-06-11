@@ -50,13 +50,13 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 function_verify () {
 unset keybot
 
-permited=$(curl -sSL "https://www.dropbox.com/s/5hr0wv1imo35j1e/Control-Bot.txt") 
+permited=$(curl -sSL "https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/source/Control-Bot.txt") 
 
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n"
   msg -bar3
-  echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) FUE RECHAZADA!"
+  echo -e "\e[31m      Â¡LA IP $(wget -qO- ipv4.icanhazip.com) FUE RECHAZADA!"
   echo -e "     $link No AUTORIZADA el ACCESO "
   echo -e " SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
   msg -bar3
@@ -68,7 +68,7 @@ permited=$(curl -sSL "https://www.dropbox.com/s/5hr0wv1imo35j1e/Control-Bot.txt"
   clear
   echo -e "\n\n\n"
   msg -bar3
-  echo -e "\e[32m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) ESTA AUTORIZADA!"
+  echo -e "\e[32m      Â¡LA IP $(wget -qO- ipv4.icanhazip.com) ESTA AUTORIZADA!"
   echo -e "  -> [NGINX} Autorizada"
   msg -bar3
   echo -e "\n\n\n"
@@ -96,7 +96,7 @@ bot_gen
 crear_cupon () {
 unset cupon tm numk
 msg -bar3
-echo -e " \033[7;49;35m ${TTini} 🐲 BotGEN ChumoGH${TTcent}ADM ( V1.0 ) 🐲 ◄◄<===   \033[0m"
+echo -e " \033[7;49;35m ${TTini} ðŸ² BotGEN ChumoGH${TTcent}ADM ( V1.0 ) ðŸ² â—„â—„<===   \033[0m"
 msg -bar3
 echo -e "\033[0;35m[\033[0;36m1\033[0;35m] \033[0;35m> \033[1;37m CREAR 1 CUPON UNICO "
 echo -e "\033[0;35m[\033[0;36m2\033[0;35m] \033[0;35m> \033[1;37m CREAR CUPONES POR LOTE  )"
@@ -315,7 +315,7 @@ clear
 msg -bar3
 echo -e "\033[1;33mDescargando archivos... ESPERE "
 msg -bar3
-wget -q --no-check-certificate -O $HOME/files.tar https://www.dropbox.com/s/lfb8d895lts2kbx/file.tar
+wget -q --no-check-certificate -O $HOME/files.tar https://github.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/raw/main/source/file.tar
 [[ -d $HOME/update ]] && rm -rf $HOME/update/* || mkdir $HOME/update
 [[ -e $HOME/files.tar ]] && tar xpf $HOME/files.tar -C $HOME/update && rm -f $HOME/files.tar
 echo 999 > ${CIDdir}/limit
@@ -480,13 +480,13 @@ ID="$(cat /etc/ADM-db/Admin-ID)"
 		echo -e "$bar"
 		read foo m
 	} || {
-		MENSAJE="---------📩𝙈𝙀𝙉𝙎𝘼𝙅𝙀 𝙍𝙀𝘾𝙄𝘽𝙄𝘿𝙊📩--------\n"
+		MENSAJE="---------ðŸ“©ð™ˆð™€ð™‰ð™Žð˜¼ð™…ð™€ ð™ð™€ð˜¾ð™„ð˜½ð™„ð˜¿ð™ŠðŸ“©--------\n"
 		MENSAJE+="Esto es un mesaje de prueba!\n"
 		MENSAJE+="$bar\n"
 		URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 		curl -s -X POST $URL -d chat_id=$ID -d text="$MENSAJE" &>/dev/null
 		clear
-		echo -e "---------📩𝙈𝙀𝙉𝙎𝘼𝙅𝙀 𝙍𝙀𝘾𝙄𝘽𝙄𝘿𝙊📩--------\n"
+		echo -e "---------ðŸ“©ð™ˆð™€ð™‰ð™Žð˜¼ð™…ð™€ ð™ð™€ð˜¾ð™„ð˜½ð™„ð˜¿ð™ŠðŸ“©--------\n"
 		echo -e "\033[1;37m Mensaje enviado Exitosamente...!\n"
 		echo -e "$bar"
 		#sleep 3s
@@ -505,7 +505,7 @@ echo -e "  \033[1;37mINGRESA EL MENSAJE A ENVIAR"
 echo -e "$bar"
 read -p " $foc TEXTO: " addmss 
 MSS+="$addmss\n"
-echo -e "${cor[3]} ¿DESEAS AÑADIR OTRO SMS ? "
+echo -e "${cor[3]} Â¿DESEAS AÃ‘ADIR OTRO SMS ? "
 read -p " [S/N]: " -e -i s sshsn
 tput cuu1 && tput dl1
 tput cuu1 && tput dl1
@@ -542,12 +542,12 @@ echo -e "  \033[1;37mINGRESA EL MENSAJE A ENVIAR"
 echo -e "$bar"
 read -p " $foc TEXTO: " addmss 
 MSS+="$addmss\n"
-echo -e "${cor[3]} ¿DESEAS AÑADIR OTRO SMS ? "
+echo -e "${cor[3]} Â¿DESEAS AÃ‘ADIR OTRO SMS ? "
 read -p " [S/N]: " -e -i s sshsn
 tput cuu1 && tput dl1
 tput cuu1 && tput dl1
 [[ "$sshsn" = @(s|S|y|Y) ]] && addnewmss
-MENSAJE='  ---------📩𝙈𝙀𝙉𝙎𝘼𝙅𝙀 𝙍𝙀𝘾𝙄𝘽𝙄𝘿𝙊📩--------\n'
+MENSAJE='  ---------ðŸ“©ð™ˆð™€ð™‰ð™Žð˜¼ð™…ð™€ ð™ð™€ð˜¾ð™„ð˜½ð™„ð˜¿ð™ŠðŸ“©--------\n'
 MENSAJE+="$MSS \n "
 echo -e "$bar"
 echo -e "  \033[1;37mPEGA RUTA DE IMAGEN"
@@ -629,8 +629,8 @@ esac
 }
 
 _dowUP(){
-#[[ -e /bin/MultiBot.sh ]] || wget -O /bin/MultiBot.sh https://www.dropbox.com/scl/fi/okmkv1lnlsczw7b6fwdos/BotGen.sh?rlkey=wt2qgh5z44xvnnvjv75bpo1vm
-wget -O /bin/MultiBot.sh https://www.dropbox.com/scl/fi/okmkv1lnlsczw7b6fwdos/BotGen.sh?rlkey=wt2qgh5z44xvnnvjv75bpo1vm
+#[[ -e /bin/MultiBot.sh ]] || wget -O /bin/MultiBot.sh https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init.M/BotGen.sh
+wget -O /bin/MultiBot.sh https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init.M/BotGen.sh
 [[ -e /bin/MultiBot.sh ]] && chmod +x /bin/MultiBot.sh 
 _restartSERVICES
 }
@@ -652,7 +652,7 @@ msg -bar3
 read -p " SERVICIO A MOSTRAR: " opcion
 msg -bar3
 [[ -z ${opcion} ]] && return
-# Verificar la selección del usuario y detenerse identificando la posición en el array
+# Verificar la selecciÃ³n del usuario y detenerse identificando la posiciÃ³n en el array
 if [ "$opcion" -ge 1 ] && [ "$opcion" -le "${#archivos[@]}" ]; then
     archivo_a_eliminar="${archivos[$((opcion - 1))]}"
     echo -e " SELECCIONADO '$archivo_a_eliminar'."
@@ -670,7 +670,7 @@ if [ "$opcion" -ge 1 ] && [ "$opcion" -le "${#archivos[@]}" ]; then
 	echo -e " TOKEN : $_a3 \n ID : $_a4 \n FILE : $_a5 \n ALIAS : $_a6"
 	}
 else
-    echo "Opción no válida."
+    echo "OpciÃ³n no vÃ¡lida."
 fi
 read -p "PRESIONE ENTER PARA CONTINUAR"
 bot_gen
@@ -705,16 +705,16 @@ msg -bar3
 read -p " SERVICIO A ELIMINAR: " opcion
 msg -bar3
 [[ -z ${opcion} ]] && return
-# Verificar la selección del usuario y detenerse identificando la posición en el array
+# Verificar la selecciÃ³n del usuario y detenerse identificando la posiciÃ³n en el array
 if [ "$opcion" -ge 1 ] && [ "$opcion" -le "${#archivos[@]}" ]; then
     archivo_a_eliminar="${archivos[$((opcion - 1))]}"
 	systemctl disable $archivo_a_eliminar
 	systemctl stop $archivo_a_eliminar
 	rm -f /etc/systemd/system/$archivo_a_eliminar
     echo "  SE HA SELECCIONADO '$archivo_a_eliminar'."
-    # Aquí iría el código para eliminar el archivo
+    # AquÃ­ irÃ­a el cÃ³digo para eliminar el archivo
 else
-    echo "Opción no válida."
+    echo "OpciÃ³n no vÃ¡lida."
 fi
 read -p "PRESIONE ENTER PARA CONTINUAR"
 bot_gen
@@ -738,7 +738,7 @@ read -p " INGRESA TU ${new_number} Alias ADMIN : " _alias
 msg -bar3
 #PIDGEN=$(ps aux|grep -v grep|grep "BotGen.sh")
 #if [[ ! $PIDGEN ]]; then
-[[ -e /bin/MultiBot.sh ]] || wget -O /bin/MultiBot.sh https://www.dropbox.com/scl/fi/okmkv1lnlsczw7b6fwdos/BotGen.sh?rlkey=wt2qgh5z44xvnnvjv75bpo1vm
+[[ -e /bin/MultiBot.sh ]] || wget -O /bin/MultiBot.sh https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/init.M/BotGen.sh
 [[ -e /bin/MultiBot.sh ]] && chmod +x /bin/MultiBot.sh 
 echo -e "[Unit]
 Description=MultiBotGen ${new_number} Service by @ChumoGH
@@ -790,7 +790,7 @@ _UID=$(cat /etc/ADM-db/User-ID|wc -l)
 [[ ${_UID} < 1 ]] &&  _UID="\033[1;31m${_UID}" || _UID="\033[1;32m${_UID}"
 [[ "${limcont}" = "999" ]] && limted=" >>>" || limted=$(cat /etc/ADM-db/limit)
 msg -bar3
-echo -e " \033[7;49;35m ${TTini} 🐲 BotGEN ChumoGH${TTcent}ADM ( V2.0 ) 🐲 ◄◄<===   \033[0m"
+echo -e " \033[7;49;35m ${TTini} ðŸ² BotGEN ChumoGH${TTcent}ADM ( V2.0 ) ðŸ² â—„â—„<===   \033[0m"
 msg -bar3
 echo -e "  - LIMITADOR \033[1;32m($limted) \033[1;39m|\033[1;37m KILL ID ${PID_kill} \033[1;39m|\033[1;37m UsersID ${_UID} "
 msg -bar3 
@@ -805,7 +805,7 @@ echo -e "\033[0;35m[\033[0;36m8\033[0;35m] \033[0;35m> \033[1;37m ENLACES $nm | 
 echo -e "\033[0;35m[\033[0;36m9\033[0;35m] \033[0;35m> \033[1;37m $rfij"
 [[ -e $HOME/RegBOT/API* ]] && {
 echo -e "\033[0;35m[\033[0;36m10\033[0;35m] \033[0;35m> \033[1;37m API  "
-echo -e "             �?\033[0;33m$(cat < $HOME/RegBOT/API*)"
+echo -e "             â¤?\033[0;33m$(cat < $HOME/RegBOT/API*)"
 } || echo -e "\033[0;35m[\033[0;36m10\033[0;35m] \033[0;35m> \033[1;37m AGREGAR API ( exe.io/cut.io ) " 
 echo -e "\033[0;35m[\033[0;36m11\033[0;35m] \033[0;35m> \033[1;37m Modificar COSTES DEL BOT"
 echo -e "\033[0;35m[\033[0;36m12\033[0;35m] \033[0;35m> \033[1;37m MENU DE CUPONES \033[1;32m "
@@ -846,7 +846,7 @@ _POS="$(echo ${apiT} | cut -d '-' -f2)"
 [[ $_POS = 1 ]] && rm -f $HOME/RegBOT/API2 || rm -f $HOME/RegBOT/API1
 chmod +x $HOME/RegBOT/API${_POS}
 msg -bar3
-echo -e "TOKEN AÑADIDO CON EXITO.."
+echo -e "TOKEN AÃ‘ADIDO CON EXITO.."
 echo 
 [[ $_POS = 1 ]] && echo -e "TOKEN APLICADO A \033[1;37m cut.io \033[1;32m " || echo -e "TOKEN APLICADO A \033[1;37m exe.io \033[1;32m "
 echo -e " AHORA VE Y GENERA UN ACORTADOR "
