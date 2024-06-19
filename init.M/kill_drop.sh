@@ -2,9 +2,9 @@
 # -*- ENCODING: UTF-8 -*-
 
 LINE="  ̶-̶ ̶-̶ ̶-̶ ̶-̶ ̶-̶ ̶-̶ ̶-̶ ̶-̶ ̶-̶ "
-IP="$(wget -qO- ifconfig.me)"
-_restart=$(date +"%H") 
 
+[[ -z ${IP} ]] && IP=$(cat < /bin/ejecutar/IPcgh) || IP="$(wget -qO- ifconfig.me)"
+_restart=$(date +"%H") 
 _globales=$(curl -sSL "https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/source/Control-Bot.txt" | cut -d '|' -f1)
 permited=$(curl -sSL "https://raw.githubusercontent.com/Qm90R2VuIDIwMjQgQ2h1bW9HSCsK/U291cmNlIEJvckdlbiBBRE1jZ2ggQ2h1bW9HSCAyMDI0IFBsdXM-/main/source/Control-Bot.txt") 
  [[ $(echo $permited|grep "${IP}") = "" ]] && {
@@ -24,7 +24,7 @@ l='̶-̶ ̶-̶ ̶-̶ MOD MENU ̶-̶ ̶-̶ ̶-̶'
 clear&&clear
 
 [[ "${_restart}" = '00' ]] && {
-rm -f $HOME/RegBOT/free_check.txt
+echo -e "" > $HOME/RegBOT/free_check.txt
 echo -e "BORRADO $(date +"%H:%M:%S") " >> $HOME/log.bot
 }
 
