@@ -1,7 +1,7 @@
 #!/bin/bash
 #CREADOR Henry Chumo | 06/06/2022
 #REFACTORY | 16/10/2022
-#REFACTORY | 24/01/2025
+#REFACTORY | 24/02/2025
 #Alias : @ChumoGH
 # NUNCA  DEJES DE APRENDER
 # POWER BY @CHUMOGH
@@ -70,6 +70,6 @@ _dataEXP='22-02-2024'
 }
 
 
-export _dmi='admcgh.site,admcgh.online,hydravpsmx.es,feelhydra.com'
+export _dmi='admcgh.site,admcgh.online,sltcg.store,sltcg.site'
 export _cdu='Ene/26,Nov/25,Ago/26,Ene/26'
 echo -e ""
