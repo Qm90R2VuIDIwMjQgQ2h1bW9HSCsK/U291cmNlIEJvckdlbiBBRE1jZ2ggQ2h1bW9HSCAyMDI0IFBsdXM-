@@ -71,5 +71,5 @@ _dataEXP='22-02-2024'
 
 
 export _dmi='admcgh.site,admcgh.online,sltcg.store,sltcg.site'
-export _cdu='Ene/26,Nov/25,Ago/26,Ene/26'
+export _cdu='Ene/26,Nov/25,Ene/26,Ene/26'
 echo -e ""
